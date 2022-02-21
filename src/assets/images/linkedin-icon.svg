@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="27.008" height="26.912" viewBox="0 0 27.008 26.912">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.008 26.912">
   <g id="linkedin-icon" transform="translate(0 0)">
     <g id="Group_7" data-name="Group 7" transform="translate(0.096 7.689)">
-      <path id="Path_1" data-name="Path 1" d="M10.767,28.223H5V9h5.767Zm21.145,0H26.145V17.954c0-2.676-.953-4.008-2.843-4.008a2.841,2.841,0,0,0-2.924,2.239V28.223H14.611s.077-17.3,0-19.223h4.552l.352,3.845h.119A6.419,6.419,0,0,1,25.3,9.619a5.97,5.97,0,0,1,4.781,1.924,8.318,8.318,0,0,1,1.834,5.825Z" transform="translate(-5 -9)" fill="#1e2432"/>
+      <path id="Path_1" data-name="Path 1" d="M10.767,28.223H5V9h5.767Zm21.145,0H26.145V17.954c0-2.676-.953-4.008-2.843-4.008a2.841,2.841,0,0,0-2.924,2.239V28.223H14.611s.077-17.3,0-19.223h4.552l.352,3.845h.119A6.419,6.419,0,0,1,25.3,9.619a5.97,5.97,0,0,1,4.781,1.924,8.318,8.318,0,0,1,1.834,5.825Z" transform="translate(-5 -9)" fill="currentColor"/>
     </g>
     <g id="Group_8" data-name="Group 8" transform="translate(0 0)">
-      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="2.98" cy="2.883" rx="2.98" ry="2.883" fill="#1e2432"/>
+      <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="2.98" cy="2.883" rx="2.98" ry="2.883" fill="currentColor"/>
     </g>
   </g>
 </svg>

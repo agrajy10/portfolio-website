@@ -5,7 +5,8 @@ export const lightTheme = {
   logo: {
     color: '#1E2432'
   },
-  navLinks: {
+  nav: {
+    borderColor: 'rgba(30, 36, 50, 0.19)',
     color: '#1E2432'
   },
   heading: {
