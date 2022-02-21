@@ -1,14 +1,18 @@
 import 'modern-normalize';
+import { ThemeProvider } from 'styled-components';
+
+import Home from './pages/Home';
 
 import { lightTheme } from './styles/theme';
-
 import GlobalStyle from './styles/globalStyle';
 
 function App() {
   return (
     <div className="App">
-      <GlobalStyle theme={lightTheme} />
-      <h1>Portfolio website</h1>
+      <ThemeProvider theme={lightTheme}>
+        <GlobalStyle />
+        <Home />
+      </ThemeProvider>
     </div>
   );
 }
