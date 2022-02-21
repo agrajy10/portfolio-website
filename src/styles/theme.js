@@ -23,7 +23,8 @@ export const lightTheme = {
   button: {
     primary: {
       bg: '#1E2432',
-      color: '#ffffff'
+      color: '#ffffff',
+      borderColor: '#1E2432'
     },
     secondary: {
       bg: '#ffffff',

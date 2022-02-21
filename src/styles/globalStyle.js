@@ -40,6 +40,18 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family:PlusJakartaSans, sans-serif;
+    background-color:${({ theme }) => theme.bg};
+    color:${({ theme }) => theme.color};
+    line-height:1.9;
+  }
+
+  h1,h2,h3 {
+    line-height:1.3;
+    font-weight:700;
+  }
+
+  img {
+    max-width:100%;
   }
 `;
 
