@@ -3,8 +3,10 @@ import styled from 'styled-components';
 import Container from '../layout/Container';
 import Menu from './Menu';
 import MobileMenu from './MobileMenu';
+import ThemeToggler from './ThemeToggler';
 
 import useWindowSize from '../hooks/useWindowSize';
+import breakpoints from '../styles/breakpoints';
 
 const Wrapper = styled.header`
   position: relative;
@@ -16,7 +18,11 @@ const Wrapper = styled.header`
 const HeaderContainer = styled(Container)`
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 20px;
+  @media (min-width: ${breakpoints.md}px) {
+    gap: 48px;
+  }
 `;
 
 const Logo = styled.h1`
@@ -24,7 +30,7 @@ const Logo = styled.h1`
   font-size: 20px;
   font-weight: 600;
   line-height: 1;
-  margin: 0;
+  margin: 0 auto 0 0;
   color: ${({ theme }) => theme.heading.color};
 `;
 
@@ -35,6 +41,7 @@ function Header() {
       <HeaderContainer>
         <Logo>agraj.dev</Logo>
         {width <= 768 ? <MobileMenu /> : <Menu />}
+        <ThemeToggler />
       </HeaderContainer>
     </Wrapper>
   );

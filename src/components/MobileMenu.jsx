@@ -59,8 +59,9 @@ const MobileMenuList = styled.ul`
 
 const LinksWrapper = styled.div`
   display: flex;
-  place-content: center;
-  padding: 0 15px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
   gap: 30px;
   border-bottom: 2px solid ${({ theme }) => theme.nav.borderColor};
   a {
