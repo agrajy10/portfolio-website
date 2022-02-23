@@ -82,6 +82,17 @@ const LinksWrapper = styled.div`
 `;
 
 function HeroSection() {
+  const onClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute('href');
+    const location = document.querySelector(target).offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location,
+      behavior: 'smooth'
+    });
+  };
   return (
     <Wrapper id="home">
       <ProfilePhoto src={Photo} alt="Photo of Agraj Yadav" />
@@ -99,7 +110,9 @@ function HeroSection() {
         <strong> ReactJS, Firebase, Redux, Styled Components and TailwindCSS</strong>.
       </Text>
       <LinksWrapper>
-        <Button href="#projects">View Projects</Button>
+        <Button href="#work" onClick={onClick}>
+          View Projects
+        </Button>
         <Button variant="secondary">Download Resume</Button>
       </LinksWrapper>
     </Wrapper>
