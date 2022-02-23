@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 import SectionWrapper from '../../layout/SectionWrapper';
@@ -7,7 +6,7 @@ import SkillsList from '../SkillsList';
 
 import breakpoints from '../../styles/breakpoints';
 
-import skillsData from '../../skills.json';
+import { skills } from '../../data';
 
 import SkillsIcon from '../../assets/images/skills-icon.png';
 
@@ -23,21 +22,20 @@ const SkillsGrid = styled.div`
 `;
 
 function SkillsSection() {
-  const [data, setData] = useState(skillsData);
   return (
     <SectionWrapper id="skills">
       <SectionHeading icon={SkillsIcon} heading="Tools &amp; Tech I use" subheading="Skills" />
       <SkillsGrid>
         <div>
-          <SkillsList category={data[0].category} list={data[0].tech} />
+          <SkillsList category={skills[0].category} list={skills[0].tech} />
         </div>
         <div>
-          <SkillsList category={data[1].category} list={data[1].tech} />
-          <SkillsList category={data[2].category} list={data[2].tech} />
+          <SkillsList category={skills[1].category} list={skills[1].tech} />
+          <SkillsList category={skills[2].category} list={skills[2].tech} />
         </div>
         <div>
-          <SkillsList category={data[2].category} list={data[3].tech} />
-          <SkillsList category={data[3].category} list={data[4].tech} />
+          <SkillsList category={skills[2].category} list={skills[3].tech} />
+          <SkillsList category={skills[3].category} list={skills[4].tech} />
         </div>
       </SkillsGrid>
     </SectionWrapper>

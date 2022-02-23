@@ -1,11 +1,10 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 import SectionWrapper from '../../layout/SectionWrapper';
 import SectionHeading from '../SectionHeading';
 import ProjectItem from '../ProjectItem';
 
-import projectsData from '../../projects.json';
+import { projects } from '../../data';
 
 import ProjectsIcon from '../../assets/images/projects-icon.png';
 
@@ -16,12 +15,11 @@ const ProjectsList = styled.div`
 `;
 
 function ProjectsSection() {
-  const [data, setData] = useState(projectsData);
   return (
     <SectionWrapper id="work">
       <SectionHeading icon={ProjectsIcon} heading="Projects I've Built" subheading="Work" />
       <ProjectsList>
-        {data.map((project, index) => {
+        {projects.map((project, index) => {
           return <ProjectItem key={index} {...project} />;
         })}
       </ProjectsList>
