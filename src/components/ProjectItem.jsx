@@ -90,11 +90,11 @@ const GithubLink = styled.a`
   }
 `;
 
-function ProjectItem({ image, tech, title, desc, websiteLink, githubLink }) {
+function ProjectItem({ photo, tech, title, desc, live, github }) {
   return (
     <Wrapper>
-      <a aria-hidden="true" href={websiteLink}>
-        <Image src={image ? image : placeholder} alt="" />
+      <a aria-hidden="true" href={live}>
+        <Image src={photo} alt="" />
       </a>
       <div>
         {tech.length > 0 && (
@@ -107,8 +107,10 @@ function ProjectItem({ image, tech, title, desc, websiteLink, githubLink }) {
         <Title>{title}</Title>
         <Desc>{desc}</Desc>
         <LinksWrapper>
-          <Button aria-label={`${title} - Visit website`}>Visit website</Button>
-          <GithubLink aria-label={`${title} - Visit Github repo`} href={githubLink}>
+          <Button aria-label={`${title} - Visit website`} href={live} target="_blank">
+            Visit website
+          </Button>
+          <GithubLink aria-label={`${title} - Visit Github repo`} href={github} target="_blank">
             Github repo
           </GithubLink>
         </LinksWrapper>

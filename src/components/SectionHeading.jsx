@@ -5,12 +5,11 @@ import breakpoints from '../styles/breakpoints';
 const Wrapper = styled.div`
   position: relative;
   padding-left: 85px;
-  margin-bottom: 25px;
+  margin-bottom: 50px;
   @media (min-width: ${breakpoints.sm}px) {
     padding-left: 105px;
-    margin-bottom: 50px;
   }
-  @media (min-width: ${breakpoints.sm}px) {
+  @media (min-width: ${breakpoints.md}px) {
     padding-left: 120px;
   }
 `;
@@ -57,9 +56,9 @@ const Heading = styled.h2`
   }
 `;
 
-function SectionHeading({ subheading, heading, icon }) {
+function SectionHeading({ subheading, heading, icon, className }) {
   return (
-    <Wrapper>
+    <Wrapper className={className}>
       <Icon src={icon} alt="" />
       <SubHeading>{subheading}</SubHeading>
       <Heading>{heading}</Heading>

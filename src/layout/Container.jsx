@@ -8,8 +8,8 @@ const Wrapper = styled.div`
   padding-right: 15px;
 `;
 
-function Container({ children }) {
-  return <Wrapper>{children}</Wrapper>;
+function Container({ children, className }) {
+  return <Wrapper className={className}>{children}</Wrapper>;
 }
 
 export default Container;

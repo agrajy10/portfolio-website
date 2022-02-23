@@ -17,9 +17,17 @@ const Element = styled.button`
   user-select: none;
 `;
 
-function Button({ type = 'button', variant = 'primary', className, children }) {
+function Button({ type = 'button', variant = 'primary', className, children, href, ...rest }) {
+  if (href) {
+    return (
+      <Element as="a" href={href} type={type} variant={variant} className={className} {...rest}>
+        {children}
+      </Element>
+    );
+  }
+
   return (
-    <Element type={type} variant={variant} className={className}>
+    <Element type={type} variant={variant} className={className} {...rest}>
       {children}
     </Element>
   );

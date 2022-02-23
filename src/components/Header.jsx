@@ -1,10 +1,19 @@
 import styled from 'styled-components';
 
 import Container from '../layout/Container';
+import Menu from './Menu';
 import MobileMenu from './MobileMenu';
 
+import useWindowSize from '../hooks/useWindowSize';
+
 const Wrapper = styled.header`
+  position: relative;
   padding: 30px 0;
+  line-height: 1;
+  z-index: 988;
+`;
+
+const HeaderContainer = styled(Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,13 +29,14 @@ const Logo = styled.h1`
 `;
 
 function Header() {
+  const { width } = useWindowSize();
   return (
-    <Container>
-      <Wrapper>
+    <Wrapper>
+      <HeaderContainer>
         <Logo>agraj.dev</Logo>
-        <MobileMenu />
-      </Wrapper>
-    </Container>
+        {width <= 768 ? <MobileMenu /> : <Menu />}
+      </HeaderContainer>
+    </Wrapper>
   );
 }
 

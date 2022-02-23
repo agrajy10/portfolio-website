@@ -6,11 +6,6 @@ import { ReactComponent as CloseIcon } from '../assets/images/close-icon.svg';
 import { ReactComponent as GithubIcon } from '../assets/images/github-icon.svg';
 import { ReactComponent as LinkedinIcon } from '../assets/images/linkedin-icon.svg';
 
-const Wrapper = styled(Popover)`
-  position: relative;
-  z-index: 99;
-`;
-
 const MenuToggler = styled(Popover.Button)`
   display: inline-flex;
   place-content: center;
@@ -28,13 +23,19 @@ const MenuToggler = styled(Popover.Button)`
   }
 `;
 
+const Overlay = styled(Popover.Overlay)`
+  position: fixed;
+  inset: 0;
+  background-color: ${({ theme }) => theme.bg};
+  z-index: -1;
+`;
+
 const MobileMenuPanel = styled(Popover.Panel)`
   background-color: ${({ theme }) => theme.bg};
   position: absolute;
   top: 100%;
-  right: -15px;
-  width: 100vw;
-  margin-top: 30px;
+  left: 0;
+  right: 0;
 `;
 
 const MobileMenuList = styled.ul`
@@ -72,41 +73,60 @@ const LinksWrapper = styled.div`
 
 function MobileMenu() {
   return (
-    <Wrapper>
+    <Popover>
       {({ open }) => {
         return (
           <>
             <MenuToggler aria-label="Toggle Main menu">
               {open ? <CloseIcon /> : <MenuIcon />}
             </MenuToggler>
+            <Overlay />
             <MobileMenuPanel>
               <MobileMenuList>
                 <li>
-                  <a href="#">Home</a>
+                  <Popover.Button as="a" href="#home">
+                    Home
+                  </Popover.Button>
                 </li>
                 <li>
-                  <a href="#">Skills</a>
+                  <Popover.Button as="a" href="#skills">
+                    Skills
+                  </Popover.Button>
                 </li>
                 <li>
-                  <a href="#">Work</a>
+                  <Popover.Button as="a" href="#projects">
+                    Work
+                  </Popover.Button>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <Popover.Button as="a" href="#contact">
+                    Contact
+                  </Popover.Button>
                 </li>
               </MobileMenuList>
               <LinksWrapper>
-                <a aria-label="Visit Github page" href="#github">
+                <Popover.Button
+                  as="a"
+                  className="github"
+                  href="https://github.com/agrajy10"
+                  target="_blank"
+                  aria-label="Visit Github page (opens in a new tab)">
                   <GithubIcon />
-                </a>
-                <a aria-label="Visit Linkedin page" href="#linkedin">
+                </Popover.Button>
+                <Popover.Button
+                  as="a"
+                  className="linkedin"
+                  href="https://www.linkedin.com/in/agrajyadav/"
+                  target="_blank"
+                  aria-label="Visit Linkedin page (opens in a new tab)">
                   <LinkedinIcon />
-                </a>
+                </Popover.Button>
               </LinksWrapper>
             </MobileMenuPanel>
           </>
         );
       }}
-    </Wrapper>
+    </Popover>
   );
 }
 

@@ -13,7 +13,7 @@ const List = styled.ul`
   list-style: none;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1;
+  line-height: 1.5;
   li:not(:last-child) {
     margin-bottom: 15px;
   }
