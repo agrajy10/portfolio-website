@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import { Popover } from '@headlessui/react';
 
+import { links } from '../data';
+
 import { ReactComponent as MenuIcon } from '../assets/images/menu-icon.svg';
 import { ReactComponent as CloseIcon } from '../assets/images/close-icon.svg';
 import { ReactComponent as GithubIcon } from '../assets/images/github-icon.svg';
@@ -72,9 +74,21 @@ const LinksWrapper = styled.div`
 `;
 
 function MobileMenu() {
+  const onClick = (e, close) => {
+    e.preventDefault();
+    close();
+    const target = e.target.getAttribute('href');
+    const location = document.querySelector(target).offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location,
+      behavior: 'smooth'
+    });
+  };
   return (
     <Popover>
-      {({ open }) => {
+      {({ open, close }) => {
         return (
           <>
             <MenuToggler aria-label="Toggle Main menu">
@@ -83,26 +97,15 @@ function MobileMenu() {
             <Overlay />
             <MobileMenuPanel>
               <MobileMenuList>
-                <li>
-                  <Popover.Button as="a" href="#home">
-                    Home
-                  </Popover.Button>
-                </li>
-                <li>
-                  <Popover.Button as="a" href="#skills">
-                    Skills
-                  </Popover.Button>
-                </li>
-                <li>
-                  <Popover.Button as="a" href="#projects">
-                    Work
-                  </Popover.Button>
-                </li>
-                <li>
-                  <Popover.Button as="a" href="#contact">
-                    Contact
-                  </Popover.Button>
-                </li>
+                {links.map(({ id, label, href }) => {
+                  return (
+                    <li key={id}>
+                      <a onClick={(e) => onClick(e, close)} href={href}>
+                        {label}
+                      </a>
+                    </li>
+                  );
+                })}
               </MobileMenuList>
               <LinksWrapper>
                 <Popover.Button

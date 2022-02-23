@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { links } from '../data';
+
 import { ReactComponent as GithubIcon } from '../assets/images/github-icon.svg';
 import { ReactComponent as LinkedinIcon } from '../assets/images/linkedin-icon.svg';
 
@@ -37,21 +39,30 @@ const MenuList = styled.ul`
 `;
 
 function Menu() {
+  const onClick = (e) => {
+    e.preventDefault();
+    const target = e.target.getAttribute('href');
+    const location = document.querySelector(target).offsetTop;
+
+    window.scrollTo({
+      left: 0,
+      top: location,
+      behavior: 'smooth'
+    });
+  };
+
   return (
     <Wrapper>
       <MenuList>
-        <li>
-          <a href="#home">Home</a>
-        </li>
-        <li>
-          <a href="#skills">Skills</a>
-        </li>
-        <li>
-          <a href="#projects">Work</a>
-        </li>
-        <li>
-          <a href="#contact">Contact</a>
-        </li>
+        {links.map(({ id, label, href }) => {
+          return (
+            <li key={id}>
+              <a onClick={onClick} href={href}>
+                {label}
+              </a>
+            </li>
+          );
+        })}
         <li>
           <a
             className="github"

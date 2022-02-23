@@ -18,7 +18,7 @@ const ProjectsList = styled.div`
 function ProjectsSection() {
   const [data, setData] = useState(projectsData);
   return (
-    <SectionWrapper id="projects">
+    <SectionWrapper id="work">
       <SectionHeading icon={ProjectsIcon} heading="Projects I've Built" subheading="Work" />
       <ProjectsList>
         {data.map((project, index) => {
