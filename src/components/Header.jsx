@@ -32,6 +32,9 @@ const Logo = styled.h1`
   line-height: 1;
   margin: 0 auto 0 0;
   color: ${({ theme }) => theme.heading.color};
+  @media (min-width: ${breakpoints.md}px) {
+    padding-bottom: 8px;
+  }
 `;
 
 function Header() {

@@ -27,14 +27,19 @@ export const lightTheme = {
     primary: {
       bg: '#1E2432',
       color: '#ffffff',
-      borderColor: '#1E2432'
+      borderColor: '#1E2432',
+      hover: {
+        borderColor: '#1E2432',
+        outlineColor: '#1E2432'
+      }
     },
     secondary: {
       bg: '#ffffff',
       color: '#1E2432',
       borderColor: 'rgba(30,36,50,0.19)',
       hover: {
-        borderColor: '#1E2432'
+        borderColor: '#FFFFFF',
+        outlineColor: '#1E2432'
       }
     }
   }
@@ -69,14 +74,19 @@ export const darkTheme = {
     primary: {
       bg: '#ffffff',
       color: '#1E2432',
-      borderColor: '#ffffff'
+      borderColor: '#ffffff',
+      hover: {
+        borderColor: '#ffffff',
+        outlineColor: '#ffffff'
+      }
     },
     secondary: {
       bg: '#1E2432',
       color: '#ffffff',
       borderColor: 'rgba(230,233,238,0.19)',
       hover: {
-        borderColor: '#ffffff'
+        borderColor: '#1E2432',
+        outlineColor: '#ffffff'
       }
     }
   }

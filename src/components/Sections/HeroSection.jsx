@@ -84,7 +84,7 @@ const LinksWrapper = styled.div`
 function HeroSection() {
   const onClick = (e) => {
     e.preventDefault();
-    const target = e.target.getAttribute('href');
+    const target = e.currentTarget.getAttribute('href');
     const location = document.querySelector(target).offsetTop;
 
     window.scrollTo({

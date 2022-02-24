@@ -19,9 +19,15 @@ const Button = styled(Switch)`
   border-radius: 50%;
   cursor: pointer;
   color: ${({ theme }) => theme.themeToggler.color};
+  outline: none;
+  transition: border-color 0.5s ease;
   svg {
     width: 28px;
     height: 28px;
+  }
+  &:hover,
+  &:focus {
+    border-color: ${({ theme }) => theme.themeToggler.color};
   }
 `;
 

@@ -21,11 +21,30 @@ const MenuList = styled.ul`
   justify-content: flex-end;
   gap: 48px;
   a {
+    display: block;
+    position: relative;
     font-weight: 600;
     text-decoration: none;
+    padding-bottom: 8px;
     color: ${({ theme }) => theme.nav.color};
-    &:hover {
-      text-decoration: underline;
+    &:not(.linkedin, .github) {
+      outline: none;
+    }
+    &:not(.linkedin, .github)::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      background-color: ${({ theme }) => theme.nav.color};
+      transition: transform 0.3s ease;
+    }
+    &:hover::after,
+    &:focus::after {
+      transform: scaleX(1);
     }
   }
   .github svg {

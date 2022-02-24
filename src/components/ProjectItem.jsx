@@ -80,13 +80,29 @@ const LinksWrapper = styled.div`
 
 const GithubLink = styled.a`
   display: inline-block;
+  position: relative;
+  padding-bottom: 7px;
   line-height: 1;
   font-weight: 500;
   color: ${({ theme }) => theme.link};
   text-decoration: none;
   white-space: nowrap;
-  &:hover {
-    text-decoration: underline;
+  outline: none;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    transform: scaleX(0);
+    transform-origin: left center;
+    background-color: ${({ theme }) => theme.nav.color};
+    transition: transform 0.3s ease;
+  }
+  &:hover::after,
+  &:focus::after {
+    transform: scaleX(1);
   }
 `;
 
