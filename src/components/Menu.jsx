@@ -4,7 +4,6 @@ import { links } from '../data';
 
 import { ReactComponent as GithubIcon } from '../assets/images/github-icon.svg';
 import { ReactComponent as LinkedinIcon } from '../assets/images/linkedin-icon.svg';
-import ThemeToggler from './ThemeToggler';
 
 const Wrapper = styled.div`
   display: flex;
