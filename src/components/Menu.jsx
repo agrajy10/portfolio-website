@@ -48,12 +48,12 @@ const MenuList = styled.ul`
     }
   }
   .github svg {
-    width: 30px;
-    height: 30px;
+    width: 26px;
+    height: 26px;
   }
   .linkedin svg {
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
   }
 `;
 
