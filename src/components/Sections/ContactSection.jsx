@@ -13,9 +13,9 @@ import breakpoints from '../../styles/breakpoints';
 
 const ContactWrapper = styled(SectionWrapper)`
   background-color: #161a25;
-  margin-top: 50px;
+  margin-top: 3.125rem;
   @media (min-width: ${breakpoints.sm}px) {
-    margin-top: 100px;
+    margin-top: 6.25rem;
   }
 `;
 
@@ -26,7 +26,7 @@ const ContactHeading = styled(SectionHeading)`
   img {
     position: static;
     display: block;
-    margin: 0 auto 30px auto;
+    margin: 0 auto 1.875rem auto;
     transform: translateY(0);
   }
   h2 {
@@ -43,14 +43,14 @@ const LinksWrapper = styled.div`
     color: #fff;
   }
   svg {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
   }
   @media (min-width: ${breakpoints.sm}px) {
     gap: 100px;
     svg {
-      width: 60px;
-      height: 60px;
+      width: 3.75rem;
+      height: 3.75rem;
     }
   }
 `;

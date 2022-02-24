@@ -15,7 +15,7 @@ const SkillsGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 15px 30px;
   @media (min-width: ${breakpoints.sm}px) {
-    max-width: 960px;
+    max-width: 60rem;
     grid-template-columns: repeat(3, 1fr);
     justify-content: space-between;
   }

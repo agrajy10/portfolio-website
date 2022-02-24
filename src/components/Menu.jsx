@@ -25,7 +25,7 @@ const MenuList = styled.ul`
     position: relative;
     font-weight: 600;
     text-decoration: none;
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
     color: ${({ theme }) => theme.nav.color};
     &:not(.linkedin, .github) {
       outline: none;
@@ -36,7 +36,7 @@ const MenuList = styled.ul`
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 2px;
+      height: 0.125rem;
       transform: scaleX(0);
       transform-origin: left center;
       background-color: ${({ theme }) => theme.nav.color};
@@ -48,12 +48,12 @@ const MenuList = styled.ul`
     }
   }
   .github svg {
-    width: 26px;
-    height: 26px;
+    width: 1.625rem;
+    height: 1.625rem;
   }
   .linkedin svg {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 `;
 

@@ -27,14 +27,14 @@ const Image = styled.img`
 `;
 
 const TechList = styled.ul`
-  margin: 0 0 15px 0;
+  margin: 0 0 0.9375rem 0;
   padding: 0;
   list-style: none;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  font-size: 15px;
+  font-size: 0.9375rem;
   font-weight: 500;
   white-space: nowrap;
   li:not(:last-child)::after {
@@ -42,11 +42,11 @@ const TechList = styled.ul`
     display: inline-block;
     position: relative;
     top: -4px;
-    width: 5px;
-    height: 5px;
+    width: 0.3125rem;
+    height: 0.3125rem;
     background-color: #687086;
     border-radius: 50%;
-    margin: 0 13px;
+    margin: 0 0.8125rem;
   }
   @media (min-width: ${breakpoints.md}px) {
     justify-content: flex-start;
@@ -54,16 +54,16 @@ const TechList = styled.ul`
 `;
 
 const Title = styled.h3`
-  font-size: 32px;
+  font-size: 2rem;
   color: ${({ theme }) => theme.heading.color};
-  margin: 0 0 20px 0;
+  margin: 0 0 1.25rem 0;
   @media (min-width: ${breakpoints.md}px) {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 `;
 
 const Desc = styled.p`
-  margin: 0 0 40px 0;
+  margin: 0 0 2.5rem 0;
 `;
 
 const LinksWrapper = styled.div`
@@ -81,7 +81,7 @@ const LinksWrapper = styled.div`
 const GithubLink = styled.a`
   display: inline-block;
   position: relative;
-  padding-bottom: 7px;
+  padding-bottom: 0.4375rem;
   line-height: 1;
   font-weight: 500;
   color: ${({ theme }) => theme.link};
@@ -94,7 +94,7 @@ const GithubLink = styled.a`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 2px;
+    height: 0.125rem;
     transform: scaleX(0);
     transform-origin: left center;
     background-color: ${({ theme }) => theme.nav.color};

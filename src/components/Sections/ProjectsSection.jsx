@@ -10,7 +10,7 @@ import ProjectsIcon from '../../assets/images/projects-icon.png';
 
 const ProjectsList = styled.div`
   article:not(:last-child) {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
   }
 `;
 

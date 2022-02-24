@@ -2,10 +2,10 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 100%;
-  max-width: 1180px;
+  max-width: 73.75rem;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 `;
 
 function Container({ children, className }) {

@@ -10,7 +10,7 @@ import breakpoints from '../styles/breakpoints';
 
 const Wrapper = styled.header`
   position: relative;
-  padding: 30px 0;
+  padding: 1.875rem 0;
   line-height: 1;
   z-index: 988;
 `;
@@ -27,13 +27,13 @@ const HeaderContainer = styled(Container)`
 
 const Logo = styled.h1`
   display: inline-block;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 600;
   line-height: 1;
   margin: 0 auto 0 0;
   color: ${({ theme }) => theme.heading.color};
   @media (min-width: ${breakpoints.md}px) {
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
   }
 `;
 

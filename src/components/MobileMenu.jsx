@@ -11,8 +11,8 @@ import { ReactComponent as LinkedinIcon } from '../assets/images/linkedin-icon.s
 const MenuToggler = styled(Popover.Button)`
   display: inline-flex;
   place-content: center;
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   border: none;
   cursor: pointer;
   user-select: none;
@@ -20,8 +20,8 @@ const MenuToggler = styled(Popover.Button)`
   padding: 0;
   color: ${({ theme }) => theme.heading.color};
   svg {
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
   }
 `;
 
@@ -48,7 +48,7 @@ const MobileMenuList = styled.ul`
   border-top: 2px solid ${({ theme }) => theme.nav.borderColor};
   a {
     display: block;
-    padding: 30px 15px;
+    padding: 1.875rem 0.9375rem;
     color: ${({ theme }) => theme.nav.color};
     text-decoration: none;
     font-weight: 600;
@@ -61,16 +61,16 @@ const LinksWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
   gap: 30px;
   border-bottom: 2px solid ${({ theme }) => theme.nav.borderColor};
   a {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     color: ${({ theme }) => theme.nav.color};
   }
   svg {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
   }
 `;
 

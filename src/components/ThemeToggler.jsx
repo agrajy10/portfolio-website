@@ -11,8 +11,8 @@ const Button = styled(Switch)`
   display: inline-block;
   position: relative;
   overflow: hidden;
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
   padding: 0;
   background-color: ${({ theme }) => theme.themeToggler.bg};
   border: 2px solid ${({ theme }) => theme.themeToggler.borderColor};
@@ -35,8 +35,8 @@ const Button = styled(Switch)`
     transition: all 1s ease;
     transform-origin: 50% 100px;
     svg {
-      width: 32px;
-      height: 32px;
+      width: 2rem;
+      height: 2rem;
     }
   }
   .sun-icon {

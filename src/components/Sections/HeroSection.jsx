@@ -8,33 +8,33 @@ import Photo from '../../assets/images/photo.png';
 import WavingHand from '../../assets/images/waving-hand-icon.png';
 
 const Wrapper = styled.section`
-  padding: 40px 0 100px 0;
+  padding: 2.5rem 0 6.25rem 0;
   text-align: center;
 `;
 
 const ProfilePhoto = styled.img`
   display: inline-block;
-  width: 200px;
-  height: 200px;
+  width: 12.5rem;
+  height: 12.5rem;
   border-radius: 50%;
 `;
 
 const Heading = styled.h2`
   color: ${({ theme }) => theme.heading.color};
-  max-width: 360px;
-  margin: 0 auto 20px auto;
-  font-size: 48px;
+  max-width: 22.5rem;
+  margin: 0 auto 1.25rem auto;
+  font-size: 3rem;
   line-height: 1.2;
   span {
     display: inline-block;
     position: relative;
-    padding-left: 55px;
-    font-size: 24px;
+    padding-left: 3.4375rem;
+    font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
     img {
-      width: 40px;
-      height: 40px;
+      width: 2.5rem;
+      height: 2.5rem;
       position: absolute;
       top: 50%;
       left: 0;
@@ -43,29 +43,29 @@ const Heading = styled.h2`
     }
   }
   @media (min-width: ${breakpoints.sm}px) {
-    font-size: 80px;
-    max-width: 780px;
+    font-size: 5rem;
+    max-width: 48.75rem;
     span {
-      font-size: 32px;
-      padding-left: 75px;
+      font-size: 2rem;
+      padding-left: 4.6875rem;
       img {
-        width: 60px;
-        height: 60px;
+        width: 3.75rem;
+        height: 3.75rem;
       }
     }
   }
 `;
 
 const Text = styled.p`
-  font-size: 18px;
-  max-width: 800px;
-  margin: 0 auto 60px auto;
+  font-size: 1.125rem;
+  max-width: 50rem;
+  margin: 0 auto 3.75rem auto;
   strong {
     font-weight: 600;
     color: ${({ theme }) => theme.heading.color};
   }
   @media (min-width: ${breakpoints.sm}px) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `;
 

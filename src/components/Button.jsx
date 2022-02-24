@@ -20,7 +20,7 @@ const Element = styled.button`
     text-align: center;
     line-height: 1;
     min-width: 242px;
-    padding: 22px;
+    padding: 1.375rem;
     border: 2px solid ${({ theme, variant }) => theme.button[variant].borderColor};
     border-radius: 100px;
     transition: border-color 200ms cubic-bezier(0.4, 0, 0.2, 1);
