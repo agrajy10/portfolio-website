@@ -12,7 +12,7 @@ import { ReactComponent as EmailIcon } from '../../assets/images/email-icon.svg'
 import breakpoints from '../../styles/breakpoints';
 
 const ContactWrapper = styled(SectionWrapper)`
-  background-color: #1e2432;
+  background-color: #161a25;
   margin-top: 50px;
   @media (min-width: ${breakpoints.sm}px) {
     margin-top: 100px;
