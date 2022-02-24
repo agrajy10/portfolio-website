@@ -8,9 +8,9 @@ import { ReactComponent as SunIcon } from '../assets/images/sun-icon.svg';
 import { ReactComponent as MoonIcon } from '../assets/images/moon-icon.svg';
 
 const Button = styled(Switch)`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
   width: 50px;
   height: 50px;
   padding: 0;
@@ -21,13 +21,35 @@ const Button = styled(Switch)`
   color: ${({ theme }) => theme.themeToggler.color};
   outline: none;
   transition: border-color 0.5s ease;
-  svg {
-    width: 28px;
-    height: 28px;
-  }
   &:hover,
   &:focus {
     border-color: ${({ theme }) => theme.themeToggler.color};
+  }
+  .sun-icon,
+  .moon-icon {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    inset: 0;
+    transition: all 1s ease;
+    transform-origin: 50% 100px;
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+  .sun-icon {
+    transform: rotate(0deg);
+  }
+  .moon-icon {
+    transform: rotate(90deg);
+  }
+  &.dark-mode .sun-icon {
+    transform: rotate(-90deg);
+  }
+  &.dark-mode .moon-icon {
+    transform: rotate(0deg);
   }
 `;
 
@@ -46,8 +68,14 @@ function ThemeToggler() {
     <Button
       aria-label="Enable dark mode"
       checked={theme === 'dark' ? true : false}
-      onChange={onChange}>
-      <span aria-hidden="true">{theme === 'dark' ? <MoonIcon /> : <SunIcon />}</span>
+      onChange={onChange}
+      className={theme === 'dark' ? 'dark-mode' : ''}>
+      <span aria-hidden="true" className="sun-icon">
+        <SunIcon />
+      </span>
+      <span aria-hidden="true" className="moon-icon">
+        <MoonIcon />
+      </span>
     </Button>
   );
 }
