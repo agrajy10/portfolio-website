@@ -34,8 +34,8 @@ function SkillsSection() {
           <SkillsList category={skills[2].category} list={skills[2].tech} />
         </div>
         <div>
-          <SkillsList category={skills[2].category} list={skills[3].tech} />
-          <SkillsList category={skills[3].category} list={skills[4].tech} />
+          <SkillsList category={skills[3].category} list={skills[3].tech} />
+          <SkillsList category={skills[4].category} list={skills[4].tech} />
         </div>
       </SkillsGrid>
     </SectionWrapper>
