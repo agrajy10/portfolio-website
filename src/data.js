@@ -55,7 +55,8 @@ export const skills = [
 
 export const projects = [
   {
-    photo: 'src/assets/images/rent-or-sell.jpg',
+    photo:
+      'https://raw.githubusercontent.com/agrajy10/portfolio-website/master/src/assets/images/rent-or-sell.jpg',
     title: 'Rent or Sell',
     desc: 'Online website where users can put up their house for sale or rental. This is a full-stack project which uses firebase for storage, database and authentication. ',
     tech: ['React', 'Tailwind CSS', 'Dasiy UI', 'Firebase'],
@@ -63,7 +64,8 @@ export const projects = [
     live: 'https://rentorsell.netlify.app/'
   },
   {
-    photo: 'src/assets/images/product-feedback-board.jpg',
+    photo:
+      'https://raw.githubusercontent.com/agrajy10/portfolio-website/master/src/assets/images/product-feedback-board.jpg',
     title: 'Product feedback app',
     desc: 'A web app that allows product users to post their suggestions, bug and feature requests. Users can sort, filter feedback and they can alson upvote and comment on other users feedback. This is a full-stack project which uses firebase for backend.',
     tech: ['React', 'Styled Components', 'Firebase', 'Redux Toolkit'],
@@ -71,7 +73,8 @@ export const projects = [
     live: 'https://product-feedback-board.netlify.app/'
   },
   {
-    photo: 'src/assets/images/invoice-app.jpg',
+    photo:
+      'https://raw.githubusercontent.com/agrajy10/portfolio-website/master/src/assets/images/invoice-app.jpg',
     title: 'Invoice App',
     desc: 'A web app to manage invoices sent to the clients. User can create new invoices, manage or update existing invoices. This app uses localStorage to save app data.',
     tech: ['React', 'Styled Components'],
