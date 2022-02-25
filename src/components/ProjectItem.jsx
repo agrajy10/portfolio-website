@@ -109,7 +109,7 @@ const GithubLink = styled.a`
 function ProjectItem({ photo, tech, title, desc, live, github }) {
   return (
     <Wrapper>
-      <a aria-hidden="true" href={live}>
+      <a aria-hidden="true" href={live} target="_blank">
         <Image src={photo} alt="" />
       </a>
       <div>
