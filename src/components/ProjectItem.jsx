@@ -10,20 +10,12 @@ const Wrapper = styled.article`
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  align-items: center;
+  align-items: flex-start;
   text-align: center;
-  @media (min-width: ${breakpoints.md}px) {
-    grid-template-columns: repeat(2, 1fr);
-    text-align: left;
-  }
-  @media (min-width: ${breakpoints.lg}px) {
-    grid-template-columns: 520px 1fr;
-    gap: 40px;
-  }
 `;
 
 const Image = styled.img`
-  max-width: 100%;
+  width: 100%;
 `;
 
 const TechList = styled.ul`
@@ -48,9 +40,6 @@ const TechList = styled.ul`
     border-radius: 50%;
     margin: 0 0.8125rem;
   }
-  @media (min-width: ${breakpoints.md}px) {
-    justify-content: flex-start;
-  }
 `;
 
 const Title = styled.h3`
@@ -64,6 +53,10 @@ const Title = styled.h3`
 
 const Desc = styled.p`
   margin: 0 0 2.5rem 0;
+  span {
+    display: block;
+    font-size: 0.9rem;
+  }
 `;
 
 const LinksWrapper = styled.div`
@@ -75,6 +68,7 @@ const LinksWrapper = styled.div`
   gap: 30px;
   @media (min-width: ${breakpoints.md}px) {
     flex-direction: row;
+    justify-content: center;
   }
 `;
 
@@ -106,11 +100,11 @@ const GithubLink = styled.a`
   }
 `;
 
-function ProjectItem({ photo, tech, title, desc, live, github }) {
+function ProjectItem({ photo, tech, title, category, desc, live, github }) {
   return (
     <Wrapper>
       <a aria-hidden="true" href={live} target="_blank">
-        <Image src={photo} alt="" />
+        <Image src={photo || placeholder} alt="" />
       </a>
       <div>
         {tech.length > 0 && (
@@ -121,14 +115,26 @@ function ProjectItem({ photo, tech, title, desc, live, github }) {
           </TechList>
         )}
         <Title>{title}</Title>
-        <Desc>{desc}</Desc>
+        <Desc>
+          {desc}
+          {category === 'freelance' && (
+            <span>
+              <strong>Design is not done by me.</strong>
+            </span>
+          )}
+        </Desc>
+
         <LinksWrapper>
-          <Button aria-label={`${title} - Visit website`} href={live} target="_blank">
-            Visit website
-          </Button>
-          <GithubLink aria-label={`${title} - Visit Github repo`} href={github} target="_blank">
-            Github repo
-          </GithubLink>
+          {live && (
+            <Button aria-label={`${title} - Visit website`} href={live} target="_blank">
+              Visit website
+            </Button>
+          )}
+          {github && (
+            <GithubLink aria-label={`${title} - Visit Github repo`} href={github} target="_blank">
+              Github repo
+            </GithubLink>
+          )}
         </LinksWrapper>
       </div>
     </Wrapper>
