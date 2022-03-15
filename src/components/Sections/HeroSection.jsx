@@ -4,7 +4,7 @@ import Button from '../Button';
 
 import breakpoints from '../../styles/breakpoints';
 
-import Photo from '../../assets/images/photo.png';
+import Photo from '../../assets/images/photo.jpg';
 import WavingHand from '../../assets/images/waving-hand-icon.png';
 
 const Wrapper = styled.section`
