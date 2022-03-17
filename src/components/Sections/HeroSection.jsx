@@ -6,6 +6,7 @@ import breakpoints from '../../styles/breakpoints';
 
 import Photo from '../../assets/images/photo.jpg';
 import WavingHand from '../../assets/images/waving-hand-icon.png';
+import Resume from '../../assets/Agraj_Yadav_Resume.pdf';
 
 const Wrapper = styled.section`
   padding: 2.5rem 0 6.25rem 0;
@@ -113,7 +114,9 @@ function HeroSection() {
         <Button href="#work" onClick={onClick}>
           View Projects
         </Button>
-        <Button variant="secondary">Download Resume</Button>
+        <Button variant="secondary" href={Resume} target="_blank">
+          Download Resume
+        </Button>
       </LinksWrapper>
     </Wrapper>
   );
